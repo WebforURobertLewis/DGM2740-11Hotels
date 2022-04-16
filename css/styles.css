@@ -318,7 +318,7 @@ html {
 body {
   font-size: 16px;
   font-family: Verdana, sans-serif;
-  background-color: #dee8f9; }
+  background-color: #f4f7fd; }
 
 /*----------- HEADER --------------*/
 header {
@@ -395,7 +395,7 @@ main {
   padding: 0 2%;
   min-height: 10rem;
   margin-bottom: 100px;
-  background-color: #c8d8f6; }
+  background-color: #dee8f9; }
   main h1 {
     margin: 0;
     padding-top: 30px; }
