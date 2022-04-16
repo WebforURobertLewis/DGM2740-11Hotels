@@ -1,0 +1,155 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    background-color: lighten($tritaryColor, 55%);
+} 
+ 
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 2%;
+    background-color: $tritaryColor;
+    color: white;
+}
+header h1 {margin: 0;}
+header h2 {margin: 0; font-weight: normal;}
+
+/*----------- NAVIGATION --------------*/
+nav {
+    background-color: $primaryColor;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    border: none;
+    ul{
+        display: flex;
+        margin: auto;
+    }
+    ul li{
+        flex-basis: 33.3%;
+        a{
+            display: block;
+            width: 100%;
+            text-transform: uppercase;
+        }
+    }
+}
+nav ul { 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    float: left;
+    width: 25%;
+}
+nav ul li a {
+    display: block;
+    background-color: $primaryColor;
+    color: darken($tritaryColor, 10%);
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+nav i.icon{
+    color: darken($tritaryColor, 10%);
+}
+nav ul li:first-child a {border-left: none;}
+
+nav ul li a:hover {
+    background-color: $secondaryColor;
+    color: darken($tritaryColor, 25%);
+
+}
+nav ul li.active a i{
+    color: #fff;
+}
+nav ul li.active a {
+    background-color: darken($tritaryColor, 10%);
+    color: #fff;
+}
+nav.clearfix::after{
+    width: 100%;
+    margin: auto;
+}
+/*----------- MAIN --------------*/
+main {
+    padding: 0 2%;
+    min-height: 10rem;
+    margin-bottom: 100px;
+    background-color: lighten($tritaryColor, 50%);
+    h1{
+        margin: 0;
+        padding-top: 30px;
+    }
+}
+
+
+div#myCards{
+    display: grid;
+    grid-template-columns: 1fr;
+    img{width: 100%;}
+    figure {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        figcaption{
+            position: absolute;
+            bottom: 3px; 
+            color: white;
+            width: 100%;
+            background-color: #777777d8;
+            padding: .3rem $gutter;
+        }//end of caption
+    }//end of figure
+}//end of cards
+div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+div span{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: darken($primaryColor, 30%);
+
+}
+i.icon{
+    font-size: 1.9rem;
+    color: darken($primaryColor, 30%);
+    }
+
+div span p{
+    padding-left: 1.1rem;
+    margin-bottom: 0;
+}
+div span p.address2, p.address3{
+    margin-top: 0;
+}
+/*----------- FOOTER --------------*/
+footer {
+    background-color: $primaryColor;
+    padding: .5rem 2%;
+    text-align: center;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
